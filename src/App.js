@@ -3,6 +3,7 @@ import About from './About';
 import Nav from './Nav';
 import Shop from './Shop';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
 
 function App() {
   return (
@@ -10,9 +11,10 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/' element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='shop' element={<Shop />} />
+          <Route path='shop/:id' element={<ItemDetail />} />
         </Routes>
       </Router>
     </div>
